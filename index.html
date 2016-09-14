@@ -1,0 +1,76 @@
+<!-- I took inspiration from the 'cat clicker' and 'NYC map' projects -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yo Map</title>
+    <link rel="stylesheet" type="text/css" href="css\style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="options-box">
+        <h1>Visit Austin, Texas!</h1>
+        <div>
+          <input id="show-listings" type="button" value="Show Sites">
+          <input id="hide-listings" type="button" value="Hide Sites">
+          <hr>
+          <span class="text"> Draw a shape to search for tourist sites!</span>
+          <input id="toggle-drawing"  type="button" value="Drawing Tools">
+        </div>
+        <hr>
+
+        <div>
+          <h2>What's Around?</h2>
+          <span class="text"> Within </span>
+          <select id="max-duration">
+            <option value="10">10 min</option>
+            <option value="15">15 min</option>
+            <option value="30">30 min</option>
+            <option value="60">1 hour</option>
+          </select>
+          <select id="mode">
+            <option value="DRIVING">drive</option>
+            <option value="WALKING">walk</option>
+            <option value="BICYCLING">bike</option>
+            <option value="TRANSIT">transit ride</option>
+          </select>
+          <span class="text">of</span>
+          <input id="search-within-time-text" type="text" placeholder="Ex: Amy's Ice Cream or West 6th Street, Austin, TX">
+          <input id="search-within-time" type="button" value="Go">
+        </div>
+        <hr>
+        <div>
+          <h2>Area Search</h2>
+          <input id="places-search" type="text" placeholder="Ex: Ice Cream in Austin, TX">
+          <input id="go-places" type="button" value="Go">
+        </div>
+        <hr>
+        <div>
+        <h2 id="favspot"> My Favorite Spots</h2>
+                  <ul data-bind="foreach: funList">
+                    <li data-bind="text: name, click: $parent.setFun"></li>
+                  </ul>
+
+          <div data-bind="with:currentFun">
+
+              <h3 data-bind="text: name"></h3>
+              <img src="" alt="Fun Place" data-bind=" attr: {src: imgSrc}">
+
+        </div>
+        </div>
+
+      </div>
+
+      <div id="map"></div>
+    </div>
+    <script type='text/javascript' src='js/knockout-3.4.0.js'></script>
+    <script type='text/javascript' src='js/ko-app.js'></script>
+    <script type='text/javascript' src='js/mapscript.js'></script>
+
+    <script async defer
+        src=
+        "https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyCy3GBBYGkJEtxfzXb0ykX5V2wFfS2gARc&v=3&callback=initMap">
+    </script>
+
+  </body>
+</html>
