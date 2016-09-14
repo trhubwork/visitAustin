@@ -22,7 +22,7 @@ function initMap() {
       featureType: 'administrative',
       elementType: 'labels.text.stroke',
       stylers: [
-        { color: '#ffffff' },
+        { color: '#e0e0e0' },
         { weight: 6 }
       ]
     },{
@@ -67,14 +67,21 @@ function initMap() {
       elementType: 'geometry',
       stylers: [
         { visibility: 'on' },
-        { color: '#f0e4d3' }
+        { color: '#9CCBB7' }
       ]
     },{
       featureType: 'road.highway',
       elementType: 'geometry.fill',
       stylers: [
         { color: '#f22805' },
-        { lightness: -25 }
+        { lightness: -30 }
+      ]
+    },{
+      featureType: 'landscape',
+      elementType: 'man_made',
+      stylers: [
+        { visibility: 'on' },
+        { color: '#888786' }
       ]
     }
   ];
