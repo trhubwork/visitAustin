@@ -164,6 +164,7 @@ function initMap() {
     marker.addListener('mouseout', function() {
       this.setIcon(defaultIcon);
     });
+    
   }
   document.getElementById('show-listings').addEventListener('click', showListings);
 
