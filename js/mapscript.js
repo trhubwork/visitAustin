@@ -107,13 +107,13 @@ function initMap() {
   // These are the real estate listings that will be shown to the user.
   // Normally we'd have these in a database instead.
   var locations = [
-    {title: 'Capital of Texas', location: {lat: 30.2746652, lng: -97.7425392}},
-    {title: 'Favorite Sixth Street Blues Bar', location: {lat: 30.274663, lng: -97.7611626}},
-    {title: 'Stevie Ray Vaugn Statue', location: {lat: 30.2631095, lng: -97.7528614}},
-    {title: 'A nice recording studio', location: {lat: 30.2701411, lng: -97.740026}},
-    {title: 'Home of the Longhorns', location: {lat: 30.2836243, lng: -97.7347289}},
-    {title: 'Good Eats', location: {lat: 30.270142, lng: -97.7334599}},
-    {title: 'Something Sweet!', location: {lat: 30.274688, lng: -97.7491053}}
+    {title: 'Texas State Capital Building', location: {lat: 30.2746652, lng: -97.7425392}},
+    {title: '6th Street District - Best bars in Texas', location: {lat: 30.274663, lng: -97.7611626}},
+    {title: 'Stevie Ray Vaughan Statue', location: {lat: 30.2628386, lng: -97.7506877}},
+    {title: 'Shine Studios', location: {lat: 30.261618, lng: -97.730083}},
+    {title: 'Darrell K. Royal Stadium', location: {lat: 30.2836243, lng: -97.7347289}},
+    {title: 'Franklin Barbecue', location: {lat: 30.270119, lng: -97.731273}},
+    {title: 'Amy\'s Ice Creams', location: {lat: 30.272028, lng: -97.754441}}
   ];
 
   var largeInfowindow = new google.maps.InfoWindow();
@@ -131,11 +131,11 @@ function initMap() {
   });
 
   // Style the markers a bit. This will be our listing marker icon.
-  var defaultIcon = makeMarkerIcon('0091ff');
+  var defaultIcon = makeMarkerIcon('FFFF24');
 
   // Create a "highlighted location" marker color for when the user
   // mouses over the marker.
-  var highlightedIcon = makeMarkerIcon('FFFF24');
+  var highlightedIcon = makeMarkerIcon('f01414');
 
   // The following group uses the location array to create an array of markers on initialize.
   for (var i = 0; i < locations.length; i++) {
@@ -166,6 +166,8 @@ function initMap() {
     });
   }
   document.getElementById('show-listings').addEventListener('click', showListings);
+
+  window.addEventListener("load", showListings);
 
   document.getElementById('hide-listings').addEventListener('click', function() {
     hideMarkers(markers);

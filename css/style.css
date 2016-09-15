@@ -1,14 +1,23 @@
 html,
 body {
   font-family: Arial, sans-serif;
-  height: 100%;
+  display: flex;
   margin: 0;
   padding: 0;
 }
 
-.container {
-  height: 100%;
-  position: relative;
+.flex-container {
+  display: -webkit-flex;
+  display: flex;
+  flex:1;
+  width: auto;
+  height: auto;
+}
+
+.flex-item {
+  width:auto;
+  height: auto;
+  margin: 5px;
 }
 
 li {
@@ -53,15 +62,18 @@ hr {
   border: none;
 }
 
+
 #map {
-  bottom:0px;
+  top: 10px;
+  bottom:10px;
   height: 100%;
-  left: 362px;
+  left: 425px;
   position: absolute;
-  right: 0px;
+  right: 10px;
+
 }
 
-.options-box {
+#options-box {
   background: #fff;
   border: 1px solid #999;
   border-radius: 3px;
@@ -69,8 +81,14 @@ hr {
   line-height: 35px;
   padding: 10px 10px 30px 10px;
   text-align: left;
-  width: 340px;
+  width: auto;
 }
+
+#pictbin {
+  height:250px;
+}
+
+
 
 #pano {
   width: 200px;
