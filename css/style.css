@@ -23,6 +23,15 @@ body {
 li {
   height: 20px;
   list-style: none;
+  margin-bottom: 5px;
+
+}
+
+button {
+  background-color: #e85113;
+  color: white;
+  width: 200px;
+
 }
 
 ul {
